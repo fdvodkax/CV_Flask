@@ -1,6 +1,5 @@
-from flask import Flask, render_template_string, render_template, jsonify, url_for
+from flask import Flask, render_template_string, render_template, jsonify
 from flask import Flask, render_template, request, redirect
-from flask_jwt_extended import create_access_token
 from flask import json
 from urllib.request import urlopen
 import sqlite3
