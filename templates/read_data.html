@@ -1,0 +1,30 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Messages</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/javascript.js"></script>
+</head>
+<body>
+    <h1>Liste des Messages</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Message</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <form action="{{ url_for('delete_all') }}" method="post" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer tous les messages ?');">
+        <input type="submit" value="Supprimer tous les messages">
+    </form>
+        
+</body>
+</html>
