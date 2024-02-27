@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un message</title>
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/javascript.js"></script>
+</head>
+<body>
+
+    <h2>Ajouter un message</h2>
+
+    <form action="/messages" method="post">
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br> <!-- Ajout de type="email" pour la vérification -->
+
+        <label for="message">Message :</label>
+        <input type="text" id="message" name="message" required><br>
+
+        <input type="submit" value="Ajouter">
+    </form>
+
+</body>
+</html>
+
